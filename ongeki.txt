@@ -1,0 +1,178 @@
+名字													
+													
+版本号	major	minor	release										
+VERSION	1	3	1										
+													
+谱面作者	dst												
+Creator	緑化委員長												
+													
+BPM定义信息	first	common	minimum	maximum									
+BPM_DEF	180	180	180	180									
+													
+节拍信息	bunshi	bunbo											
+MET_DEF	4	4											
+													
+"(?)TickResolution,物件下落分辨率相关"	resT												
+TRESOLUTION	1920												
+													
+"(?)不知道是啥玩意,没用到"	resX												
+XRESOLUTION	4096												
+													
+(?)初始节拍声音速度(就是开头几个节拍音效)?	clickDefault												
+CLK_DEF	1920												
+													
+是否为教程，没用到	isTutorial												
+TUTORIAL	0												
+													
+(?)伤害	damageBullet												
+BULLET_DAMAGE	1												
+													
+(?)伤害	damageHardBullet												
+HARDBULLET_DAMAGE	2												
+													
+(?)伤害	damageDangerBullet												
+DANGERBULLET_DAMAGE	4												
+													
+(?)伤害	damageBeam												
+BEAM_DAMAGE	2												
+													
+(?)Hold用到，貌似用来做判定	"progJudgeBPM（若<=1.00001f,则自动钦定为240）"												
+PROGJUDGE_BPM	240												
+													
+(?)Bullet Pallete List 子弹调色板列表项	"strID
+字符串id"	"shooter 
+Shooter枚举:
+UPS = TargetHead : 从玩家头顶位置
+ENE = Enemy:从敌人位置
+CEN = Center:谱面中心(?)
+MAX:(?)没用到"	"placeOffset
+子弹水平方向偏移"	"target
+Target枚举:
+PLR =  Player:射向玩家位置
+FIX = FixField:(?)
+MAX:(?)没用到"	"speed
+子弹速度,1是原速度,2是两倍速度,以此类推"	"type
+BulletType枚举:
+NML = Normal:(?)
+STR = Hard:(?)
+DNG = Danger:(?)"							
+BPL	A0	UPS	0	FIX	1	NML							
+													
+"BulletChoice ,没用到"													
+BTP													
+													
+BPM变动	unit一般和resT一样	grid	bpm										
+BPM	85	0	240										
+													
+MeterChange 节拍变动	unit	grid	bunshi	bunbo									
+MET	0	0	4	4									
+													
+ClickSE	unit	grid											
+CLK	0	0											
+													
+(?)Soflan 	unit	grid	gridLength(?)	soflan(?)									
+SFL	0	0	240	1									
+													
+EnemySet 播放敌人声音	unit	grid	"tagTbl
+WaveChangeConst.Tag枚举:
+WAVE1 = Wave1 声音1
+WAVE2 = Wave2 声音1
+BOSS = Boss Boss声音"										
+EST	0	0	WAVE1										
+													
+(?)WallLStart 左墙壁的起始标志物件	groupId 同id属于一组Wall对象集合	rpunit	rpgrid	rpX (?)									
+WLS	173	1	960	-24									
+													
+(?)WallLNext 左墙壁的连续中间标志物件	同上												
+WLN													
+													
+(?)WallLEnd 左墙壁的中止标志物件	同上												
+WLE													
+													
+(?)WallRStart 右墙壁的起始标志物件	同上												
+WRS													
+													
+(?)WallRNext 右墙壁的连续中间标志物件	同上												
+WRN													
+													
+(?)WallREnd 右墙壁的中止标志物件	同上												
+WRE													
+													
+(?)LaneLStart 左(红)线起始标识	同上												
+LLS													
+													
+(?)LaneLNext 左(红)线中继标识	同上												
+LLN													
+													
+(?)LaneLEnd 左(红)线中止标识	同上												
+LLE													
+													
+(?)LaneRStart 右(蓝)线起始标识	同上												
+LRS													
+													
+(?)LaneRNext 右(蓝)线中继标识	同上												
+LRN													
+													
+(?)LaneREnd 右(蓝)线中止标识	同上												
+LRE													
+													
+(?)LaneCStart 中(绿)线起始标识	同上												
+LCS													
+													
+(?)LaneCNext 中(绿)线中继标识	同上												
+LCN													
+													
+(?)LaneCEnd 中(绿)线中止标识	同上												
+LCE													
+													
+(?)EnemyLaneStart 	同上												
+ENS													
+													
+(?)EnemyLaneNext	同上												
+ENN													
+													
+(?)EnemyLaneEnd	同上												
+ENE													
+													
+(?)LaneDisp	laneRecID 需要引用lane类型的groupId	Fore.unit	Fore.grid	Fore.unit	Fore.grid	Rear.unit	Rear.grid	Rear.unit	Rear.grid				
+LDP	173	92	1440	24	0	93	0	24	0				
+													
+(?)LaneBlock	同上												
+LBK													
+													
+Bullet 子弹发射	"key = strId , BPL命令定义的子弹属性"	unit	grid	unit									
+BLT	A0	30	960	-24									
+													
+(?)BeamStart	recID 同id按组	rpunit	rpgrid	rpX (?)									
+BMS	0	117	960	-40	4								
+													
+(?)BeamNext	recID 同id按组	rpunit	rpgrid	rpX (?)									
+BMN	0	117	960	-40									
+													
+(?)BeamEnd	recID 同id按组	rpunit	rpgrid	rpX (?)									
+BME	0	117	960	-40									
+													
+Bell 	unit	grid	unit										
+BEL	3	1440	4										
+													
+"Flick 这个有新旧解析版本
+四个参数是新版本
+五个参数则为旧版本 , 这个貌似有奇怪的参数S"	unit	grid	unit	"移动方向:
+L = Left 向左移动 
+R = Right 向右移动"									
+FLK	26	960	-8	L									
+													
+CRFlick 	同上												
+CFK													
+													
+Tap单点物件	laneRecID 对应的红蓝绿线的id	unit	grid	unit	grid								
+TAP	72	11	1440	24	0								
+													
+CRTap 或 ExTap	同上												
+CTP 或 XTP													
+													
+Hold	laneRecID 对应的红蓝绿线的id	Fore.unit	Fore.grid	Fore.unit(?)	Fore.grid(?)	Rear.unit	Rear.grid	Rear.unit(?)	Rear.grid(?)				
+HLD	151	1	1200	-12	0	1	1680	-12	0				
+													
+CRHold 或者 ExHold	同上												
+CHD 或 XHD													
