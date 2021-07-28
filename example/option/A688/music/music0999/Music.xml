@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MusicData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dataName>music0999</dataName>
+  <Name>
+    <id>999</id>
+    <str>十六夜童歌</str>
+  </Name>
+  <ArtistName>
+    <id>1658</id>
+    <str>葉月ゆら</str>
+  </ArtistName>
+  <SourceID>999</SourceID>
+  <Genre>
+    <id>1</id>
+    <str>POPS＆ANIME</str>
+  </Genre>
+  <FumenData>
+    <FumenData>
+      <FumenConstIntegerPart>2</FumenConstIntegerPart>
+      <FumenConstFractionalPart>0</FumenConstFractionalPart>
+      <FumenFile>
+        <path>0999_00.ogkr</path>
+      </FumenFile>
+    </FumenData>
+    <FumenData>
+      <FumenConstIntegerPart>5</FumenConstIntegerPart>
+      <FumenConstFractionalPart>0</FumenConstFractionalPart>
+      <FumenFile>
+        <path>0999_01.ogkr</path>
+      </FumenFile>
+    </FumenData>
+    <FumenData>
+      <FumenConstIntegerPart>8</FumenConstIntegerPart>
+      <FumenConstFractionalPart>70</FumenConstFractionalPart>
+      <FumenFile>
+        <path>0999_02.ogkr</path>
+      </FumenFile>
+    </FumenData>
+    <FumenData>
+      <FumenConstIntegerPart>12</FumenConstIntegerPart>
+      <FumenConstFractionalPart>60</FumenConstFractionalPart>
+      <FumenFile>
+        <path>0999_03.ogkr</path>
+      </FumenFile>
+    </FumenData>
+    <FumenData>
+      <FumenConstIntegerPart>0</FumenConstIntegerPart>
+      <FumenConstFractionalPart>0</FumenConstFractionalPart>
+      <FumenFile>
+        <path />
+      </FumenFile>
+    </FumenData>
+  </FumenData>
+  <IsLunatic>false</IsLunatic>
+  <BossCard>
+    <id>100493</id>
+    <str>【R】春日部 ハル[777☆SISTERS]</str>
+  </BossCard>
+  <BossLevel>99</BossLevel>
+  <WaveAttribute>
+    <AttributeType>Fire</AttributeType>
+  </WaveAttribute>
+  <CostToUnlock>0</CostToUnlock>
+  <FinishBonus>2</FinishBonus>
+  <EpReleaseFlag>false</EpReleaseFlag>
+  <Version>1.10</Version>
+  <ReleaseVersion>2019-10-31T00:00:00</ReleaseVersion>
+  <SortOrder>1570</SortOrder>
+  <PossessingFromTheBeginning>false</PossessingFromTheBeginning>
+  <IsLockedAtTheBeginning>false</IsLockedAtTheBeginning>
+  <NameForSort>十六夜童歌</NameForSort>
+  <BossLockHpCoef>0</BossLockHpCoef>
+  <BossLockRewards />
+</MusicData>
