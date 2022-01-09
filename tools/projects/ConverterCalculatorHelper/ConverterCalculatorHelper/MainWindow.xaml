@@ -17,7 +17,7 @@
                 <TextBox Margin="5,0,0,0" Width="150" VerticalAlignment="Center" FontSize="18" Text="{Binding ResT}"></TextBox>
                 <TextBlock Margin="20,0,0,0" FontSize="20" VerticalAlignment="Center">BPM:</TextBlock>
                 <TextBox Margin="5,0,0,0"  Text="{Binding Bpm}" Width="150" VerticalAlignment="Center" FontSize="18"></TextBox>
-                <ComboBox FontSize="15" SelectedIndex="{Binding ConvertTarget}" Margin="20,0,0,0" Width="200">
+                <ComboBox FontSize="15" SelectedIndex="{Binding ConvertTarget}" Margin="20,0,0,0" Width="150">
                     <ComboBoxItem>msec -> unit + grid</ComboBoxItem>
                     <ComboBoxItem>unit + grid -> msec</ComboBoxItem>
                 </ComboBox>
@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBox Background="White" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="NoWrap" Margin="10" Text="{Binding InputText}"/>
-            <TextBox Margin="10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  Grid.Column="1" IsReadOnly="True" Background="Transparent" Text="{Binding OutputText}"/>
+            <TextBox Margin="10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"  Grid.Column="1" IsReadOnly="True" Focusable="False" Background="Transparent" Text="{Binding OutputText}"/>
         </Grid>
     </Grid>
 </Window>

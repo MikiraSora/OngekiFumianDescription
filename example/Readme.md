@@ -12,12 +12,12 @@
 │   └───StreamingAssets
 │       ├───assets
 │       │       ui_jacket_0999    //谱面封面,后缀数字为谱面id
-│       │       ui_jacket_0999_s    //谱面小图封面
-│       │
+│       │       ui_jacket_0999_s    //谱面大图封面
+│       │       Readme.md
 │       └───Sound
 │               music0999.acb    //谱面音频文件描述文件
 │               music0999.awb    //谱面音频文件本体
-│
+│               Readme.md
 └───option
     └───A688    //option文件,后缀数值范围 000 ~ 999
         │   DataConfig.xml    //option包描述文件
@@ -42,7 +42,7 @@
 
 > AssetsByteUpsertHelper.exe asset.bytes文件路径 新增的封面文件图片名1 新增的封面文件图片名2 ...
 
-请执行
+示例
 
 > AssetsByteUpsertHelper.exe D:\\summer\\package\\mu3_Data\\StreamingAssets\\assets ui_jacket_0999 ui_jacket_0999_s
 

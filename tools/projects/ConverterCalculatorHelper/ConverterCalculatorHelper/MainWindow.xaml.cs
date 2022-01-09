@@ -93,11 +93,9 @@ namespace ConverterCalculatorHelper
                 return "N/A";
 
             var T = msec * (ResT * Bpm) / 240000.0f;
-            var per = T / ResT;
-            var unit = Math.Floor(per);
-            var grid = (int)Math.Floor((per - unit) * ResT + 0.5);
+            var unit = T / ResT;
 
-            return $"{msec} {unit} {grid}";
+            return "0";
         }
 
         private string ProcessLineToMsec(string line)
