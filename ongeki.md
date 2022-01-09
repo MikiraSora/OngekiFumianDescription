@@ -167,13 +167,198 @@ BulletType:
 
 <a name="ongeki_md_10">*10:</a> 
 WaveChangeConst.Tag:
-|枚举值|枚举全名|解释|
+|枚举值|解释|
+|--|--|
+|WAVE1|声音1|
+|WAVE2|声音2|
+|BOSS|Boss声音|
+
+
+### WLS(WallLStart)
+|左墙起始物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WLS|173|1|960|-24|
+
+
+### WLN(WallLNext)
+|左墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WLN|173|2|960|0|
+
+
+### WLE(WallLEnd)
+|左墙中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WLE|173|3|960|0|
+
+
+### WRS(WallLStart)
+|右墙起始物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WRS|175|1|960|-24|
+
+
+### WRN(WallLNext)
+|右墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WRN|175|2|960|0|
+
+
+### WRE(WallLEnd)
+|右墙中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WRE|175|3|960|0|
+
+
+### WRE(WallLEnd)
+|右墙中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|WRE|175|3|960|0|
+
+
+### LLS(LaneLStart)
+|红线起始物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LLS|175|3|960|0|
+
+
+### LLN(LaneLNext)
+|红线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LLN|175|3|960|0|
+
+
+### LLE(LaneLEnd)
+|红线中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LLE|175|3|960|0|
+
+
+### LCS(LaneCStart)
+|绿线起始物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LCS|175|3|960|0|
+
+
+### LCN(LaneCNext)
+|绿线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LCN|175|3|960|0|
+
+
+### LCE(LaneCEnd)
+|绿线中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LCE|175|3|960|0|
+
+### LRS(LaneRStart)
+|蓝线起始物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LRS|175|3|960|0|
+
+
+### LRN(LaneRNext)
+|蓝线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LRN|175|3|960|0|
+
+
+### LRE(LaneREnd)
+|蓝线中止物件|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|LRE|175|3|960|0|
+
+
+### ENS(EnemyLaneStart)
+|(?)|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|ENS|175|3|960|0|
+
+
+### ENN(EnemyLaneNext)
+|(?)|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|ENN|175|3|960|0|
+
+
+### ENE(EnemyLaneEnd)
+|(?)|GroupId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|ENE|175|3|960|0|
+
+
+### LDP(LaneDisp)
+|(?)|GroupId|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
+|--|--|--|--|--|--|--|--|--|--|
+|LDP|173|92|1440|24|0|93|0|24|0|
+
+
+### LBK(LaneBlock)
+|(?)|GroupId|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
+|--|--|--|--|--|--|--|--|--|--|
+|LBK|173|92|1440|24|0|93|0|24|0|
+
+
+### BLT(Bullet)
+|Bullet|strId|tUnit|tGrid|xUnit|
+|--|--|--|--|--|
+|BLT|A0|30|960|-24|
+
+
+### BMS(BeamStart)
+|激光起始物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|
+|--|--|--|--|--|--|
+|BMS|0|117|960|-40|4|
+
+
+### BMN(BeamNext)
+|激光(可重复)中间物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|
+|--|--|--|--|--|--|
+|BMN|0|117|1500|-40|4|
+
+
+### BME(BeamEnd)
+|激光终中止物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|
+|--|--|--|--|--|--|
+|BME|0|117|1500|-40|4|
+
+<a name="ongeki_md_11">*11:</a> 
+widthID:
+|枚举值|对应的widthJudge|对应的widthDraw|
 |--|--|--|
-|WAVE1||声音1|
-|WAVE2||声音2|
-|BOSS||Boss声音|
+|1(default)|4|2|
+|2|6|3|
+|3|8|4|
+|4|16|12|
+|5|24|20|
 
 
+### BEL(Bell)
+|激光终中止物件|tUnit|tGrid|xUnit|
+|--|--|--|--|
+|BEL|3|1440|4|
 
 
+### FLK(Flick) or CFK(CriticalFlick)
+|(Critical)Flick|tUnit|tGrid|xUnit|Direction|
+|--|--|--|--|--|
+|`FLK` or `CFK`|3|1440|4|`L` or `R`|
+
+
+### TAP or CTP/XTP[\*12](#ongeki_md_12)(CriticalTap)
+|(Critical)Tap|laneGroupId[\*13](#ongeki_md_13)[\*14](#ongeki_md_14)|tUnit|tGrid|xUnit|xGrid|
+|--|--|--|--|--|--
+|`TAP` or (`CTP` = `XTP`)|72|11|1440|24|0|
+
+<a name="ongeki_md_12">*12:</a> XTP全名ExTap，但等同于CTP(CriticalTap)
+
+
+### HLD(Hold) or CHD/XHD[\*15](#ongeki_md_15)(CriticalHold)
+|(Critical)Hold|laneGroupId[\*13](#ongeki_md_13)[\*14](#ongeki_md_14)|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
+|--|--|--|--|--|--|--|--|--|--|
+|`HLD` or (`CHD` = `XHD`)|151|1|1200|-12|0|1|1680|-12|0|
+
+<a name="ongeki_md_12">*15:</a> XTP全名ExTap，但等同于CTP(CriticalTap)
+<a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型
+<a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可
 
