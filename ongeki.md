@@ -38,11 +38,11 @@ yy行为描述,xx行为具体示例命令内容
 
 
 ### TickResolution
-|TGrid.ResT[^1]|resT|
+|TGrid.ResT[\*1](#ongeki_md_1)|resT|
 |--|--|
 |TickResolution|1920|
 
-[^1]:TickResolution,物件时间轴长度基准值，用来参与物件的下落速度和物件之间的垂直距离计算",resT 一般情况下默认1920
+<a name="ongeki_md_1">*</a>TickResolution,物件时间轴长度基准值，用来参与物件的下落速度和物件之间的垂直距离计算",resT 一般情况下默认1920
 
 
 
