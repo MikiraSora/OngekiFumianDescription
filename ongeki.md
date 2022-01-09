@@ -358,7 +358,7 @@ widthID:
 |--|--|--|--|--|--|--|--|--|--|
 |`HLD` or (`CHD` = `XHD`)|151|1|1200|-12|0|1|1680|-12|0|
 
-<a name="ongeki_md_12">*15:</a> XTP全名ExTap，但等同于CTP(CriticalTap)
-<a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型
-<a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可
+<a name="ongeki_md_12">*15:</a> XTP全名ExTap，但等同于CTP(CriticalTap)<br/>
+<a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型<br/>
+<a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可<br/>
 
