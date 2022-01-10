@@ -8,7 +8,7 @@
 
 ### TGrid -> TimeGrid?
 ```
-为了方便表示,TGrid的表示为`T[tUnit,tGrid,ResT = 1920]`，ResT若为默认的1920即可不用写,比如有一个TGrid的tUnit为28,tGrid为57且ResT默认1920,那么此TGrid可以表示为`T[28,57]
+为了方便表示,TGrid的表示为 T[tUnit,tGrid,ResT = 1920] ，ResT若为默认的1920即可不用写,比如有一个TGrid的tUnit为28,tGrid为57且ResT默认1920,那么此TGrid可以表示为 T[28,57] 
 ```
 不同于osu那种谱面物件基于绝对时间值(即5000就是第5秒,以此类推)的物件时间，音击谱面采用的是类似与Be-music Source那种基于节拍相对位置的时间表示机制。<br/>
 音击物件摆放时间的设置都依赖于TGrid这个玩意。TGrid的计算有两个(半)变量:`tUnit`、`tGrid`(和TGrid不同意思)、`ResT`,为啥有半个变量捏，是因为ResT绝大部分情况下是默认1920不变。他们的计算关系相当简单:
