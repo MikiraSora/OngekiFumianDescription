@@ -133,7 +133,7 @@ BulletType:
 |BTP|(?)|
 
 
-### BPM(Bpm Change)(此命令没用到)
+### BPM(Bpm Change)
 |BPM变动|tUnit|tGrid|bpm|
 |--|--|--|--|
 |BPM|85|0|240|
