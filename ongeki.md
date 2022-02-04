@@ -335,7 +335,7 @@ widthID:
 
 
 ### BEL(Bell)
-|激光终中止物件|tUnit|tGrid|xUnit|
+|Bell物件|tUnit|tGrid|xUnit|
 |--|--|--|--|
 |BEL|3|1440|4|
 
