@@ -1,6 +1,7 @@
 ## 简介
 此文件将描述ogkr文件(即音击谱面)里面的命令以及提供相关解释<br/>
-注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变
+注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变<br/>
+目前版本:summer
 
 ## 格式描述
 |yy|yy|yy|yy|
@@ -133,7 +134,7 @@ BulletType:
 |BTP|(?)|
 
 
-### BPM(Bpm Change)(此命令没用到)
+### BPM(Bpm Change)
 |BPM变动|tUnit|tGrid|bpm|
 |--|--|--|--|
 |BPM|85|0|240|
@@ -334,7 +335,7 @@ widthID:
 
 
 ### BEL(Bell)
-|激光终中止物件|tUnit|tGrid|xUnit|
+|Bell物件|tUnit|tGrid|xUnit|
 |--|--|--|--|
 |BEL|3|1440|4|
 
@@ -358,7 +359,7 @@ widthID:
 |--|--|--|--|--|--|--|--|--|--|
 |`HLD` or (`CHD` = `XHD`)|151|1|1200|-12|0|1|1680|-12|0|
 
-<a name="ongeki_md_12">*15:</a> XTP全名ExTap，但等同于CTP(CriticalTap)
-<a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型
-<a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可
+<a name="ongeki_md_12">*15:</a> XHD全名ExHold，但等同于CHD(CriticalHold)<br/>
+<a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型<br/>
+<a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可<br/>
 
