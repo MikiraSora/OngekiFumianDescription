@@ -8,4 +8,4 @@
 * example内容 -> 90%
 * 谱面相关安装文档 -> 95%
 * 英语翻译本项目 -> 0%
-* [谱面制作工具](https://github.com/MikiraSora/OngekiFumenEditor) -> 60%,等个大爹 
+* [谱面制作工具](https://github.com/MikiraSora/OngekiFumenEditor) -> 90%,等个大爹 
