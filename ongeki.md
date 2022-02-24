@@ -100,9 +100,9 @@ yy行为描述,xx行为具体示例命令内容
 <a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
-|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)|speed|BulletType[\*7](#ongeki_md_7)|
-|--|--|--|--|--|--|--|
-|BPL|A0|UPS|0|FIX|1|NML|
+|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)| 
+|--|--|--|--|--|--|--|--|
+|BPL|A0|UPS|0|FIX|1|N|CIR|
 
 <a name="ongeki_md_5">*5:</a>
 Shooter枚举:
@@ -120,13 +120,19 @@ Target:
 |FIX|FixField|(?)射向对应位置，即在BLT等命令的XGrid位置|
 
 <a name="ongeki_md_7">*7:</a>
+BulletSize:
+|枚举值|枚举全名|解释|
+|--|--|--|
+|N|Normal|普通大小(**默认**)|
+|L|Lerge|加大版(是普通版的1.4x)|
+
+<a name="ongeki_md_17">*17:</a>
 BulletType:
 |枚举值|枚举全名|解释|
 |--|--|--|
-|NML|Normal|使用BULLET_DAMAGE伤害|
-|STR|Hard|使用HARDBULLET_DAMAGE伤害|
-|DNG|Danger|使用DANGERBULLET_DAMAGE伤害|
-
+|CIR|Circle|圆形子弹|
+|NDL|Needle|针状子弹|
+|SQR|Square|圆柱形(方状)子弹|
 
 ### BTP(Bullet Choice)(此命令没用到)
 |BulletChoice|(?)|
@@ -344,9 +350,17 @@ WaveChangeConst.Tag:
 
 
 ### BLT(Bullet)
-|Bullet|strId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|BLT|A0|30|960|-24|
+|Bullet|strId|tUnit|tGrid|xUnit|BulletType[\*18](#ongeki_md_18)|
+|--|--|--|--|--|--|
+|BLT|A0|30|960|-24|NML|
+
+<a name="ongeki_md_18">*18:</a>
+BulletType:
+|枚举值|枚举全名|解释|
+|--|--|--|
+|NML|Normal|使用BULLET_DAMAGE伤害|
+|STR|Hard|使用HARDBULLET_DAMAGE伤害|
+|DNG|Danger|使用DANGERBULLET_DAMAGE伤害|
 
 
 ### BMS(BeamStart)
