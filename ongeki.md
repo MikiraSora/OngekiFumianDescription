@@ -270,6 +270,49 @@ WaveChangeConst.Tag:
 |LRE|175|3|960|0|
 
 
+### CLS(ColorfulLaneStart)
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLS|175|3|960|0|11|2|
+
+
+### CLN(ColorfulLaneNext)
+|其他颜色(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLN|175|3|960|0|11|2|
+
+### CLN(ColorfulLaneEnd)
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLE|175|3|960|0|11|2|
+
+<a name="ongeki_md_15">*15:</a> 虽然命令是"Colorful"但实际已经钦定好一系列自定义颜色了:
+|值|颜色名字|
+|--|--|
+|0|ColorfulLaneAkari|
+|1|ColorfulLaneYuzu|
+|2|ColorfulLaneRio|
+|3|ColorfulLaneRiku|
+|4|ColorfulLaneTsubaki|
+|5|ColorfulLaneAyaka|
+|6|ColorfulLaneKaede|
+|7|ColorfulLaneSaki|
+|8|ColorfulLaneKoboshi|
+|9|ColorfulLaneArisu|
+|10|ColorfulLaneMia|
+|11|ColorfulLaneChinatsu|
+|12|ColorfulLaneTsumugi|
+|13|ColorfulLaneSetsuna|
+|14|ColorfulLaneBrown|
+|15|ColorfulLaneHaruna|
+|16|ColorfulLaneBlack|
+|17|ColorfulLaneAkane|
+|18|ColorfulLaneG|
+|19|ColorfulLaneAoi|
+
+<a name="ongeki_md_16">*16:</a> 亮度值，具体有多亮就是相对于按照用户选项里那个轨道亮度 + 3 , 比如 colorfulLaneBrightnessID = 2 , 则实际就是`2 + 3 = 5`
+
+
 ### ENS(EnemyLaneStart)
 |(?)|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
