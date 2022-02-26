@@ -392,10 +392,11 @@ widthID:
 
 
 ### BEL(Bell)
-|Bell物件|tUnit|tGrid|xUnit|
-|--|--|--|--|
-|BEL|3|1440|4|
+|Bell物件|tUnit|tGrid|xUnit|bulletPallete[\*19](#ongeki_md_19)|
+|--|--|--|--|--|
+|BEL|3|1440|4|-- 或 某个BPL的strID|
 
+<a name="ongeki_md_19">*19:</a> 如果钦定了bulletPallete,那么Bell就会像子弹一样可能实时位移和应用速度。
 
 ### FLK(Flick) or CFK(CriticalFlick)
 |(Critical)Flick|tUnit|tGrid|xUnit|Direction|
