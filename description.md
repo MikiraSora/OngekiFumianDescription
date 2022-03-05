@@ -55,4 +55,4 @@ WLE	4	16	0	-24
 ```
 
 ### 子弹速度
-子弹出现的偏移frame  = (40f - 7.5f) / (Mathf.Max((0.2f * (1f + (6f- 1f) * 0.27f)), (0.2f * UserSpeed)) * BulletSpeed)
+子弹出现的**偏移frame** = (40f - 7.5f) / (Mathf.Max((0.2f * (1f + (6f- 1f) * 0.27f)), (0.2f * `UserSpeed`)) * `BulletSpeed`)
