@@ -56,3 +56,6 @@ WLE	4	16	0	-24
 
 ### 子弹速度
 子弹出现的时间(毫秒) = (40f - 7.5f) / (Mathf.Max((0.2f * (1f + (6f- 1f) * 0.27f)), (0.2f * `UserSpeed`)) * `BulletSpeed`) * 16.6666666f
+
+### 冷知识
+* Bell和Bullet不受变速(SFL命令)管控
