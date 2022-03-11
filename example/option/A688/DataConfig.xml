@@ -2,12 +2,12 @@
 <DataConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <version>
     <major>1</major>
-    <minor>10</minor>
-    <release>4</release>
+    <minor>30</minor>
+    <release>6</release>
   </version>
   <cardMakerVersion>
     <major>1</major>
-    <minor>11</minor>
+    <minor>30</minor>
     <release>1</release>
   </cardMakerVersion>
 </DataConfig>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MusicData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<dataName>music0999</dataName>
+	<Name>
+		<id>999</id>
+		<str>the EmpErroR</str>
+	</Name>
+	<ArtistName>
+		<id>1658</id>
+		<str>sasakure.UK</str>
+	</ArtistName>
+	<MusicSourceName>
+		<id>999</id>
+		<str>the EmpErroR</str>
+	</MusicSourceName>
+	<Genre>
+		<id>1</id>
+		<str>POPS＆ANIME</str>
+	</Genre>
+	<FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>13</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path>0999_02.ogkr</path>
+			</FumenFile>
+		</FumenData>
+	</FumenData>
+  	<IsLunatic>true</IsLunatic>
+	<BossCard>
+		<id>2</id>
+		<str>【SR】あおニャン[ボス専用]</str>
+	</BossCard>
+	<BossLevel>20</BossLevel>
+	<WaveAttribute>
+		<AttributeType>Fire</AttributeType>
+	</WaveAttribute>
+	<VersionID>
+		<id>1030</id>
+		<str>ver_1_30</str>
+	</VersionID>
+  	<SortOrder>900400</SortOrder>
+	<StageID>
+		<id>1</id>
+		<str>学園_01_アリーナ</str>
+	</StageID>
+  	<PossessingFromTheBeginning>true</PossessingFromTheBeginning>
+	<CostToUnlock>0</CostToUnlock>
+	<FinishBonus>2</FinishBonus>
+	<EpReleaseFlag>false</EpReleaseFlag>
+  	<BossLockHpCoef>50000</BossLockHpCoef>
+	<Version>1.10</Version>
+	<ReleaseVersion>2019-10-31T00:00:00</ReleaseVersion>
+	<SortOrder>1570</SortOrder>
+	<IsLockedAtTheBeginning>false</IsLockedAtTheBeginning>
+	<NameForSort>the EmpErroR</NameForSort>
+	<BossLockHpCoef>1</BossLockHpCoef>
+	<BossLockRewards />
+</MusicData>
