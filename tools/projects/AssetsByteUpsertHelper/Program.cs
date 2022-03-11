@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace AssetsByteUpsertHelper
 {
     class Program
     {
+        const string FILE = "assets.bytes";
+
         static void Log(string format, params object[] args)
         {
             Console.WriteLine(format, args);
@@ -14,31 +17,52 @@ namespace AssetsByteUpsertHelper
 
         static void Main(string[] args)
         {
-            if(args.Length <= 1)
+            if (args.Length == 0)
             {
-                Log($@"usage example:{Environment.NewLine}AssetsByteUpsertHelper.exe e:\...\assets.bytes ui_jacket_0999 ui_jacket_0999_s ...");
+                Log($@"usage :{Environment.NewLine}AssetsByteUpsertHelper.exe `Your Folder Path` 'Filter Regex(default all files)'");
+                Log("");
+                Log($@"example :{Environment.NewLine}AssetsByteUpsertHelper.exe `c:\folder1\folder2\` 'ui_jacket_*'");
                 return;
             }
 
-            var upsertList = args.Skip(1).ToList();
-            var assetsByteFilePath = args[0];
-            var backupIdx = 0;
-            Log("Backup file....");
-            while (true)
+            var filterRegexStr = args.ElementAtOrDefault(1) ?? ".*";
+            var filterRegex = new Regex(filterRegexStr);
+
+            var assetsByteFileDirPath = args[0];
+            var assetsByteFilePath = Path.Combine(assetsByteFileDirPath, FILE);
+            var isUpdateAction = File.Exists(assetsByteFilePath);
+            if (isUpdateAction)
             {
-                var backupFilePath = assetsByteFilePath +  ".backup" + (backupIdx == 0 ? "" : backupIdx);
-                if (!File.Exists(backupFilePath))
+                Log("Program will update current exist `assets.bytes` file");
+                var backupIdx = 0;
+                Log("Backup file....");
+                while (true)
                 {
-                    File.Copy(assetsByteFilePath, backupFilePath, true);
-                    Log("Backup file save : " + backupFilePath);
-                    break;
+                    var backupFilePath = assetsByteFilePath + ".backup" + (backupIdx == 0 ? "" : backupIdx);
+                    if (!File.Exists(backupFilePath))
+                    {
+                        File.Copy(assetsByteFilePath, backupFilePath, true);
+                        Log("Backup file saved : " + backupFilePath);
+                        break;
+                    }
+                    backupIdx++;
                 }
-                backupIdx++;
             }
+            else
+            {
+                File.WriteAllBytes(assetsByteFilePath, new byte[0]);
+                Log("Program generate new `assets.bytes` file");
+            }
+
+            Log($"");
+            Log($"filterRegexStr = {filterRegexStr}");
+            Log($"assetsByteFileDirPath = {assetsByteFileDirPath}");
+            Log($"assetsByteFilePath = {assetsByteFilePath}");
 
             var tempDstFilePath = Path.GetTempFileName();
             var tempSrcFilePath = Path.GetTempFileName();
             Log($"tempSrcFilePath : {tempSrcFilePath} {Environment.NewLine}tempDstFilePath : {tempDstFilePath}");
+
             File.Copy(assetsByteFilePath, tempSrcFilePath, true);
 
             using var srcFileStream = File.OpenRead(tempSrcFilePath);
@@ -47,7 +71,7 @@ namespace AssetsByteUpsertHelper
             using var dstFileStream = File.OpenWrite(tempDstFilePath);
             using var writer = new BinaryWriter(dstFileStream);
 
-            var bundlesCount = reader.ReadInt32();
+            var bundlesCount = isUpdateAction && (reader.BaseStream.Length - reader.BaseStream.Position >= sizeof(int)) ? reader.ReadInt32() : 0;
             var bundleInfoList = Enumerable.Range(0, bundlesCount).Select(_ =>
             {
                 var id = reader.ReadInt32();
@@ -61,10 +85,16 @@ namespace AssetsByteUpsertHelper
                 return new { id, name, numDependencies, dependencies };
             }).ToList();
 
-            var needInsertList = upsertList.Except(bundleInfoList.Select(x => x.name).Intersect(upsertList)).ToList();
+            var needInsertList = Directory.GetFiles(assetsByteFileDirPath)
+                .Select(x=>Path.GetFileName(x))
+                .Where(x=>filterRegex.IsMatch(x))
+                .Except(bundleInfoList.Select(x=>x.name))
+                .ToList();
+
+            Log($"");
             if (needInsertList.Count > 0)
             {
-                Log($"there are {needInsertList.Count} entries to append.");
+                Log($"there are {needInsertList.Count} entries to append/update.");
                 Log($"----Append Name List----");
                 Log(string.Join(Environment.NewLine, needInsertList));
                 Log($"------------------------");
@@ -104,7 +134,7 @@ namespace AssetsByteUpsertHelper
             writer.Flush();
             writer.Close();
             Log($"copy {tempDstFilePath} -> {assetsByteFilePath}");
-            File.Copy(tempDstFilePath, assetsByteFilePath,true);
+            File.Copy(tempDstFilePath, assetsByteFilePath, true);
 
             Log($"Bye.");
         }
