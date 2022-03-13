@@ -92,6 +92,55 @@ yy行为描述,xx行为具体示例命令内容
 |BEAM_DAMAGE|2|
 
 
+### T_TOTAL
+|T_TOTAL|所有物件判定总数量[\*20](#ongeki_md_20)|
+|--|--|
+|T_TOTAL|2500|
+
+<a name="ongeki_md_20">*20:</a><br/> `T_TOTAL` = `T_TAP `+ `T_HOLD` + `T_SIDE` + `T_SHOLD` + `T_FLICK`<br/>
+`PlatinumScore` = `T_TOTAL` * 2
+
+
+### T_TAP
+|T_TAP|Tap类判定数量[\*24](#ongeki_md_24)|
+|--|--|
+|T_TAP|595|
+
+<a name="ongeki_md_21">*21:</a> `T_HOLD` = 所有Tap数量 + 所有Hold数量 - `T_SIDE`
+
+### T_HOLD
+|T_HOLD|Hold类判定数量(包括长条中间的判定)[\*21](#ongeki_md_21)|
+|--|--|
+|T_HOLD|1592|
+
+<a name="ongeki_md_21">*21:</a> `T_HOLD` = 非墙壁Hold物件的数量
+
+### T_SIDE
+|T_SIDE|墙壁Tap类判定数量[\*22](#ongeki_md_22)|
+|--|--|
+|T_SIDE|132|
+
+<a name="ongeki_md_22">*22:</a> `T_SIDE` = 墙壁Tap物件的数量 + 墙壁Hold物件的数量
+
+### T_SHOLD
+|T_SHOLD|墙壁Hold类判定数量(包括长条中间的判定)[\*23](#ongeki_md_23)|
+|--|--|
+|T_SHOLD|58|
+
+<a name="ongeki_md_23">*23:</a> `T_SHOLD` = 墙壁Hold物件的数量以及它长度判定数量
+
+### T_FLICK
+|T_FLICK|Flick判定数量|
+|--|--|
+|T_FLICK|123|
+
+
+### T_BELL
+|T_FLICK|BELL判定数量|
+|--|--|
+|T_FLICK|159|
+
+
 ### PROGJUDGE_BPM
 |(?)Hold相关|progJudgeBPM[\*4](#ongeki_md_4)|
 |--|--|
