@@ -271,19 +271,19 @@ WaveChangeConst.Tag:
 
 
 ### ENS(EnemyLaneStart)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENS|175|3|960|0|
 
 
 ### ENN(EnemyLaneNext)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENN|175|3|960|0|
 
 
 ### ENE(EnemyLaneEnd)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENE|175|3|960|0|
 
