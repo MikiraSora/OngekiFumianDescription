@@ -369,19 +369,19 @@ WaveChangeConst.Tag:
 
 
 ### ENS(EnemyLaneStart)
-|对手人物水平移位起始物件|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENS|175|3|960|0|
 玩玩ぱくぱく☆がーる紫谱，看看对面江江抽风
 
 ### ENN(EnemyLaneNext)
-|对手人物水平移位(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENN|175|3|960|0|
 
 
 ### ENE(EnemyLaneEnd)
-|对手人物水平移位中止物件|GroupId|tUnit|tGrid|xUnit|
+|对面人物和杂鱼的移动轨迹中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENE|175|3|960|0|
 
