@@ -1,7 +1,7 @@
 ## 简介
 此文件将描述ogkr文件(即音击谱面)里面的命令以及提供相关解释<br/>
 注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变<br/>
-目前版本：bright
+目前版本：bright memory
 
 ## 格式描述
 |yy|yy|yy|yy|
@@ -369,19 +369,19 @@ WaveChangeConst.Tag:
 
 
 ### ENS(EnemyLaneStart)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对手人物水平移位起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENS|175|3|960|0|
-
+玩玩ぱくぱく☆がーる紫谱，看看对面江江抽风
 
 ### ENN(EnemyLaneNext)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对手人物水平移位(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENN|175|3|960|0|
 
 
 ### ENE(EnemyLaneEnd)
-|(?)|GroupId|tUnit|tGrid|xUnit|
+|对手人物水平移位中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENE|175|3|960|0|
 
