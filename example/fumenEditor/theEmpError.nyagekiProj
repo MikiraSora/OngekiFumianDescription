@@ -1,0 +1,218 @@
+{
+  "AudioFilePath": "I:\\theEmpError\\audio.mp3",
+  "AudioDuration": 128653.0625,
+  "EditorSetting": {
+    "JudgeLineOffsetY": 59.583333333333336,
+    "SoundOffset": 200.04999999999976,
+    "EditorDisplayName": null,
+    "DisableXGridMagneticDock": false,
+    "ForceMagneticDock": true,
+    "ForceTapHoldMagneticDockToLane": false,
+    "DisableTGridMagneticDock": false,
+    "XGridUnitSpace": 4,
+    "TGridUnitLength": 240,
+    "BeatSplit": 2,
+    "XGridDisplayMaxUnit": 30,
+    "IsNotifying": true
+  },
+  "FumenFilePath": "F:\\summer\\OngekiFumianDiscription\\example\\option\\A688\\music\\0999_02.ogkr",
+  "StoreBulletPalleteEditorDatas": {
+    "A0": {
+      "Name": "\u5782\u76F4\u5F39",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 106,
+        "G": 125,
+        "B": 189,
+        "ScA": 1,
+        "ScR": 0.14412847,
+        "ScG": 0.20507874,
+        "ScB": 0.50888133
+      }
+    },
+    "A1": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 255,
+        "G": 0,
+        "B": 0,
+        "ScA": 1,
+        "ScR": 1,
+        "ScG": 0,
+        "ScB": 0
+      }
+    },
+    "A2": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "A3": {
+      "Name": "\u53F3\u4E0A",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 0,
+        "G": 255,
+        "B": 34,
+        "ScA": 1,
+        "ScR": 0,
+        "ScG": 1,
+        "ScB": 0.015996294
+      }
+    },
+    "A4": {
+      "Name": "\u5DE6\u4E0A",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 0,
+        "G": 255,
+        "B": 9,
+        "ScA": 1,
+        "ScR": 0,
+        "ScG": 1,
+        "ScB": 0.002731743
+      }
+    },
+    "A5": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "A6": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 106,
+        "B": 178,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.14412847,
+        "ScB": 0.44520122
+      }
+    },
+    "A7": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "A8": {
+      "Name": "f1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "A9": {
+      "Name": "f2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AA": {
+      "Name": "f3",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AB": {
+      "Name": "s1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AC": {
+      "Name": "s2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AD": {
+      "Name": "",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    }
+  },
+  "IsNotifying": true
+}

@@ -8,20 +8,17 @@
 <pre>
 │   Readme.md  <--- 你正在读的文档 ^_^
 │
-├───mu3_Data 
-│   └───StreamingAssets
-│       ├───assets
-│       │       ui_jacket_0999    //谱面封面,后缀数字为谱面id
-│       │       ui_jacket_0999_s    //谱面大图封面
-│       │       Readme.md
-│       └───Sound
-│               music0999.acb    //谱面音频文件描述文件
-│               music0999.awb    //谱面音频文件本体
-│               Readme.md
+|
 └───option
     └───A688    //option文件,后缀数值范围 000 ~ 999
         │   DataConfig.xml    //option包描述文件
         │
+        ├───assets //封面文件
+        |
+        |
+        ├───musicsource //音频文件
+        |
+        |   
         ├───event
         │   └───event1023456789    //事件，后缀11位数字的事件id,且不能和其他已有事件id冲突
         │           Event.xml    //通过事件描述文件,可以添加/注册谱面文件及内容(但需要服务器支持)
