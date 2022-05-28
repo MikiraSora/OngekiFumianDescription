@@ -1,4 +1,4 @@
-## OngekiFumianDiscription ~ 音击谱面(以及相关)文档
+## OngekiFumianDescription ~ 音击谱面(以及相关)文档
 ---
 #### 简介
   本repo提供音击谱面内容解释以及相关内容注解，本项目仅对现有文档内容进行推测和理解，仅供学习。
