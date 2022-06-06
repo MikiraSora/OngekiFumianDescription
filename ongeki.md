@@ -1,7 +1,7 @@
 ## 简介
 此文件将描述ogkr文件(即音击谱面)里面的命令以及提供相关解释<br/>
 注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变<br/>
-目前版本:summer
+目前版本：bright
 
 ## 格式描述
 |yy|yy|yy|yy|
@@ -100,9 +100,9 @@ yy行为描述,xx行为具体示例命令内容
 <a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
-|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)|speed|BulletType[\*7](#ongeki_md_7)|
-|--|--|--|--|--|--|--|
-|BPL|A0|UPS|0|FIX|1|NML|
+|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)| 
+|--|--|--|--|--|--|--|--|
+|BPL|A0|UPS|0|FIX|1|N|CIR|
 
 <a name="ongeki_md_5">*5:</a>
 Shooter枚举:
@@ -120,13 +120,19 @@ Target:
 |FIX|FixField|(?)射向对应位置，即在BLT等命令的XGrid位置|
 
 <a name="ongeki_md_7">*7:</a>
+BulletSize:
+|枚举值|枚举全名|解释|
+|--|--|--|
+|N|Normal|普通大小(**默认**)|
+|L|Lerge|加大版(是普通版的1.4x)|
+
+<a name="ongeki_md_17">*17:</a>
 BulletType:
 |枚举值|枚举全名|解释|
 |--|--|--|
-|NML|Normal|使用BULLET_DAMAGE伤害|
-|STR|Hard|使用HARDBULLET_DAMAGE伤害|
-|DNG|Danger|使用DANGERBULLET_DAMAGE伤害|
-
+|CIR|Circle|圆形子弹|
+|NDL|Needle|针状子弹|
+|SQR|Square|圆柱形(方状)子弹|
 
 ### BTP(Bullet Choice)(此命令没用到)
 |BulletChoice|(?)|
@@ -270,6 +276,49 @@ WaveChangeConst.Tag:
 |LRE|175|3|960|0|
 
 
+### CLS(ColorfulLaneStart)
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLS|175|3|960|0|11|2|
+
+
+### CLN(ColorfulLaneNext)
+|其他颜色(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLN|175|3|960|0|11|2|
+
+### CLN(ColorfulLaneEnd)
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
+|--|--|--|--|--|--|--|
+|CLE|175|3|960|0|11|2|
+
+<a name="ongeki_md_15">*15:</a> 虽然命令是"Colorful"但实际已经钦定好一系列自定义颜色了:
+|值|颜色名字|
+|--|--|
+|0|ColorfulLaneAkari|
+|1|ColorfulLaneYuzu|
+|2|ColorfulLaneRio|
+|3|ColorfulLaneRiku|
+|4|ColorfulLaneTsubaki|
+|5|ColorfulLaneAyaka|
+|6|ColorfulLaneKaede|
+|7|ColorfulLaneSaki|
+|8|ColorfulLaneKoboshi|
+|9|ColorfulLaneArisu|
+|10|ColorfulLaneMia|
+|11|ColorfulLaneChinatsu|
+|12|ColorfulLaneTsumugi|
+|13|ColorfulLaneSetsuna|
+|14|ColorfulLaneBrown|
+|15|ColorfulLaneHaruna|
+|16|ColorfulLaneBlack|
+|17|ColorfulLaneAkane|
+|18|ColorfulLaneG|
+|19|ColorfulLaneAoi|
+
+<a name="ongeki_md_16">*16:</a> 亮度值，具体有多亮就是相对于按照用户选项里那个轨道亮度 + 3 , 比如 colorfulLaneBrightnessID = 2 , 则实际就是`2 + 3 = 5`
+
+
 ### ENS(EnemyLaneStart)
 |对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
@@ -301,9 +350,17 @@ WaveChangeConst.Tag:
 
 
 ### BLT(Bullet)
-|Bullet|strId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|BLT|A0|30|960|-24|
+|Bullet|strId|tUnit|tGrid|xUnit|BulletType[\*18](#ongeki_md_18)|
+|--|--|--|--|--|--|
+|BLT|A0|30|960|-24|NML|
+
+<a name="ongeki_md_18">*18:</a>
+BulletType:
+|枚举值|枚举全名|解释|
+|--|--|--|
+|NML|Normal|使用BULLET_DAMAGE伤害|
+|STR|Hard|使用HARDBULLET_DAMAGE伤害|
+|DNG|Danger|使用DANGERBULLET_DAMAGE伤害|
 
 
 ### BMS(BeamStart)
@@ -335,10 +392,11 @@ widthID:
 
 
 ### BEL(Bell)
-|Bell物件|tUnit|tGrid|xUnit|
-|--|--|--|--|
-|BEL|3|1440|4|
+|Bell物件|tUnit|tGrid|xUnit|bulletPallete[\*19](#ongeki_md_19)|
+|--|--|--|--|--|
+|BEL|3|1440|4|-- 或 某个BPL的strID|
 
+<a name="ongeki_md_19">*19:</a> 如果钦定了bulletPallete,那么Bell就会像子弹一样可能实时位移和应用速度。
 
 ### FLK(Flick) or CFK(CriticalFlick)
 |(Critical)Flick|tUnit|tGrid|xUnit|Direction|
