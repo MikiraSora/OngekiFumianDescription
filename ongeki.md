@@ -293,28 +293,28 @@ WaveChangeConst.Tag:
 |CLE|175|3|960|0|11|2|
 
 <a name="ongeki_md_15">*15:</a> 虽然命令是"Colorful"但实际已经钦定好一系列自定义颜色了:
-|值|颜色名字|
-|--|--|
-|0|ColorfulLaneAkari|
-|1|ColorfulLaneYuzu|
-|2|ColorfulLaneRio|
-|3|ColorfulLaneRiku|
-|4|ColorfulLaneTsubaki|
-|5|ColorfulLaneAyaka|
-|6|ColorfulLaneKaede|
-|7|ColorfulLaneSaki|
-|8|ColorfulLaneKoboshi|
-|9|ColorfulLaneArisu|
-|10|ColorfulLaneMia|
-|11|ColorfulLaneChinatsu|
-|12|ColorfulLaneTsumugi|
-|13|ColorfulLaneSetsuna|
-|14|ColorfulLaneBrown|
-|15|ColorfulLaneHaruna|
-|16|ColorfulLaneBlack|
-|17|ColorfulLaneAkane|
-|18|ColorfulLaneG|
-|19|ColorfulLaneAoi|
+|值|颜色名字|颜色预览|
+|--|--|--|
+|0|ColorfulLaneAkari|![](http://via.placeholder.com/150x30/ff999e/white?text=+)|
+|1|ColorfulLaneYuzu|![](http://via.placeholder.com/150x30/ffea73/white?text=+)|
+|2|ColorfulLaneRio|![](http://via.placeholder.com/150x30/8d5ce0/white?text=+)|
+|3|ColorfulLaneRiku|![](http://via.placeholder.com/150x30/ff71d9/white?text=+)|
+|4|ColorfulLaneTsubaki|![](http://via.placeholder.com/150x30/50bfa3/white?text=+)|
+|5|ColorfulLaneAyaka|![](http://via.placeholder.com/150x30/d169ed/white?text=+)|
+|6|ColorfulLaneKaede|![](http://via.placeholder.com/150x30/484878/white?text=+)|
+|7|ColorfulLaneSaki|![](http://via.placeholder.com/150x30/ced1d9/white?text=+)|
+|8|ColorfulLaneKoboshi|![](http://via.placeholder.com/150x30/94f453/white?text=+)|
+|9|ColorfulLaneArisu|![](http://via.placeholder.com/150x30/baf4fe/white?text=+)|
+|10|ColorfulLaneMia|![](http://via.placeholder.com/150x30/febad4/white?text=+)|
+|11|ColorfulLaneChinatsu|![](http://via.placeholder.com/150x30/ffd427/white?text=+)|
+|12|ColorfulLaneTsumugi|![](http://via.placeholder.com/150x30/4f9bab/white?text=+)|
+|13|ColorfulLaneSetsuna|![](http://via.placeholder.com/150x30/604aa3/white?text=+)|
+|14|ColorfulLaneBrown|![](http://via.placeholder.com/150x30/964B00/white?text=+)|
+|15|ColorfulLaneHaruna|![](http://via.placeholder.com/150x30/fef2f4/white?text=+)|
+|16|ColorfulLaneBlack|![](http://via.placeholder.com/150x30/000000/white?text=+)|
+|17|ColorfulLaneAkane|![](http://via.placeholder.com/150x30/cc0000/white?text=+)|
+|18|ColorfulLaneG|![](http://via.placeholder.com/150x30/00ff00/white?text=+)|
+|19|ColorfulLaneAoi|![](http://via.placeholder.com/150x30/4791ff/white?text=+)|
 
 <a name="ongeki_md_16">*16:</a> 亮度值，具体有多亮就是相对于按照用户选项里那个轨道亮度 + 3 , 比如 colorfulLaneBrightnessID = 2 , 则实际就是`2 + 3 = 5`
 
