@@ -1,7 +1,7 @@
 ## 简介
 此文件将描述ogkr文件(即音击谱面)里面的命令以及提供相关解释<br/>
 注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变<br/>
-目前版本：bright
+目前版本：bright memory
 
 ## 格式描述
 |yy|yy|yy|yy|
@@ -90,6 +90,55 @@ yy行为描述,xx行为具体示例命令内容
 |激光伤害|damageBeam|
 |--|--|
 |BEAM_DAMAGE|2|
+
+
+### T_TOTAL
+|T_TOTAL|所有物件判定总数量[\*20](#ongeki_md_20)|
+|--|--|
+|T_TOTAL|2500|
+
+<a name="ongeki_md_20">*20:</a><br/> `T_TOTAL` = `T_TAP `+ `T_HOLD` + `T_SIDE` + `T_SHOLD` + `T_FLICK`<br/>
+`PlatinumScore` = `T_TOTAL` * 2
+
+
+### T_TAP
+|T_TAP|Tap类判定数量[\*24](#ongeki_md_24)|
+|--|--|
+|T_TAP|595|
+
+<a name="ongeki_md_21">*21:</a> `T_HOLD` = 所有Tap数量 + 所有Hold数量 - `T_SIDE`
+
+### T_HOLD
+|T_HOLD|Hold类判定数量(包括长条中间的判定)[\*21](#ongeki_md_21)|
+|--|--|
+|T_HOLD|1592|
+
+<a name="ongeki_md_21">*21:</a> `T_HOLD` = 非墙壁Hold物件的数量
+
+### T_SIDE
+|T_SIDE|墙壁Tap类判定数量[\*22](#ongeki_md_22)|
+|--|--|
+|T_SIDE|132|
+
+<a name="ongeki_md_22">*22:</a> `T_SIDE` = 墙壁Tap物件的数量 + 墙壁Hold物件的数量
+
+### T_SHOLD
+|T_SHOLD|墙壁Hold类判定数量(包括长条中间的判定)[\*23](#ongeki_md_23)|
+|--|--|
+|T_SHOLD|58|
+
+<a name="ongeki_md_23">*23:</a> `T_SHOLD` = 墙壁Hold物件的数量以及它长度判定数量
+
+### T_FLICK
+|T_FLICK|Flick判定数量|
+|--|--|
+|T_FLICK|123|
+
+
+### T_BELL
+|T_FLICK|BELL判定数量|
+|--|--|
+|T_FLICK|159|
 
 
 ### PROGJUDGE_BPM
@@ -323,7 +372,7 @@ WaveChangeConst.Tag:
 |对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENS|175|3|960|0|
-
+玩玩ぱくぱく☆がーる紫谱，看看对面江江抽风
 
 ### ENN(EnemyLaneNext)
 |对面人物和杂鱼的移动轨迹(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
