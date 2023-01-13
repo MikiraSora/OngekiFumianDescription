@@ -393,10 +393,11 @@ WaveChangeConst.Tag:
 
 
 ### LBK(LaneBlock)
-|(?)|GroupId|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
+| 墙壁锁边 |GroupId[\*30](#ongeki_md_30)|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
 |--|--|--|--|--|--|--|--|--|--|
 |LBK|173|92|1440|24|0|93|0|24|0|
 
+<a name="ongeki_md_30">*30:</a> 每个LBK只能锁一个边，至于锁哪边就看GroupId引用的墙的类型。
 
 ### BLT(Bullet)
 |Bullet|strId|tUnit|tGrid|xUnit|BulletType[\*18](#ongeki_md_18)|
@@ -445,7 +446,7 @@ widthID:
 |--|--|--|--|--|
 |BEL|3|1440|4|-- 或 某个BPL的strID|
 
-<a name="ongeki_md_19">*19:</a> 如果钦定了bulletPallete,那么Bell就会像子弹一样可能实时位移和应用速度。
+<a name="ongeki_md_19">*19:</a> 如果钦定了bulletPallete,那么Bell就会像子弹一样可能实时位移和应用速度(比如 Op.1)。
 
 ### FLK(Flick) or CFK(CriticalFlick)
 |(Critical)Flick|tUnit|tGrid|xUnit|Direction|
