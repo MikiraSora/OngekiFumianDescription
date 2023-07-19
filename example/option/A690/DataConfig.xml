@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <version>
+    <major>1</major>
+    <minor>35</minor>
+    <release>2</release>
+  </version>
+  <cardMakerVersion>
+    <major>1</major>
+    <minor>35</minor>
+    <release>1</release>
+  </cardMakerVersion>
+</DataConfig>

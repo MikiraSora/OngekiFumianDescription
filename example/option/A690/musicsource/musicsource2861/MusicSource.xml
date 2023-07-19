@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MusicSourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dataName>musicsource2861</dataName>
+  <Name>
+    <id>2861</id>
+    <str>Life is PIANO</str>
+  </Name>
+  <acbFile>
+    <path>music2861.acb</path>
+  </acbFile>
+  <awbFile>
+    <path>music2861.awb</path>
+  </awbFile>
+</MusicSourceData>

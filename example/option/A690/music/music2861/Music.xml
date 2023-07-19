@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MusicData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<dataName>music2861</dataName>
+	<Name>
+		<id>2861</id>
+		<str>Life is PIANO</str>
+	</Name>
+	<ArtistName>
+		<id>12861</id>
+		<str>Junk</str>
+	</ArtistName>
+	<MusicRightsName>
+		<id>0</id>
+		<str>-</str>
+  	</MusicRightsName>
+	<MusicSourceName>
+		<id>2861</id>
+		<str>Life is PIANO</str>
+	</MusicSourceName>
+	<Genre>
+		<id>4</id>
+		<str>VARIETY</str>
+  	</Genre>
+	<FirstChapterName>
+		<id>1</id>
+		<str>マイリスト</str>
+	</FirstChapterName>
+	<FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>0</FumenConstIntegerPart>
+			<FumenConstFractionalPart>0</FumenConstFractionalPart>
+			<FumenFile>
+				<path />
+			</FumenFile>
+		</FumenData>
+		<FumenData>
+			<FumenConstIntegerPart>13</FumenConstIntegerPart>
+			<FumenConstFractionalPart>80</FumenConstFractionalPart>
+			<FumenFile>
+				<path>2861_4.ogkr</path>
+			</FumenFile>
+		</FumenData>
+	</FumenData>
+	<IsLunatic>true</IsLunatic>
+	<BossCard>
+		<id>100661</id>
+		<str>【SSR】三角 葵[「これから」を奏でていこうよ!!]</str>
+	</BossCard>
+	<BossLevel>40</BossLevel>
+	<WaveAttribute>
+		<AttributeType>Aqua</AttributeType>
+	</WaveAttribute>
+	<CostToUnlock>0</CostToUnlock>
+	<FinishBonus>2</FinishBonus>
+	<EpReleaseFlag>false</EpReleaseFlag>
+	<VersionID>
+		<id>1025</id>
+		<str>ver_1_25</str>
+	</VersionID>
+	<SortOrder>107600</SortOrder>
+	<StageID>
+		<id>2</id>
+		<str>学園_02_校門前</str>
+	</StageID>
+	<PossessingFromTheBeginning>true</PossessingFromTheBeginning>
+	<IsLockedAtTheBeginning>false</IsLockedAtTheBeginning>
+	<ReleaseVersion>2021-03-31T00:00:00</ReleaseVersion>
+	<NameForSort>Life is PIANO</NameForSort>
+	<BossLockHpCoef>0</BossLockHpCoef>
+	<BossLockRewards />
+	<BossVoiceNo>1</BossVoiceNo>
+	<IsBonusTrack>false</IsBonusTrack>
+</MusicData>
