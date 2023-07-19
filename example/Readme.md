@@ -32,21 +32,4 @@
                     Music.xml    //谱面信息文件
 </pre>
 
-### 谱面用法(需要aqua配合支持)
-
-1. 将example各个文件夹覆盖到游戏对应的位置
-2. 使用或编译本项目tools/AssetsByteUpsertHelper,将谱面封面的文件名注册到游戏的资源列表上,用法:
-
-> AssetsByteUpsertHelper.exe asset.bytes文件路径 新增的封面文件图片名1 新增的封面文件图片名2 ...
-
-示例
-
-> AssetsByteUpsertHelper.exe D:\\summer\\package\\mu3_Data\\StreamingAssets\\assets ui_jacket_0999 ui_jacket_0999_s
-
-这里的ui_jacket_0999和ui_jacket_0999_s便是新添谱面的封面图片文件名了<br>
-3. 打开aqua的数据库文件**db.sqlite**，在ongeki_game_event表格插入新的数据,值为支持的事件id(比如上面的1023456789)
-![](./readme_img/1.png)
-
-4. 打开aqua,打开游戏,enjoy.
-
 
