@@ -69,19 +69,19 @@ yy行为描述,xx行为具体示例命令内容
 
 
 ### BULLET_DAMAGE
-|(?)伤害|damageBullet|
+|子弹伤害|damageBullet|
 |--|--|
 |BULLET_DAMAGE|1|
 
 
 ### HARDBULLET_DAMAGE
-|(?)伤害|damageHardBullet|
+|强化弹伤害|damageHardBullet|
 |--|--|
 |HARDBULLET_DAMAGE|2|
 
 
 ### DANGERBULLET_DAMAGE
-|(?)伤害|damageDangerBullet|
+|危险弹伤害|damageDangerBullet|
 |--|--|
 |DANGERBULLET_DAMAGE|4|
 
@@ -248,78 +248,72 @@ WaveChangeConst.Tag:
 |WLE|173|3|960|0|
 
 
-### WRS(WallLStart)
+### WRS(WallRStart)
 |右墙起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |WRS|175|1|960|-24|
 
 
-### WRN(WallLNext)
+### WRN(WallRNext)
 |右墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |WRN|175|2|960|0|
 
 
-### WRE(WallLEnd)
+### WRE(WallREnd)
 |右墙中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |WRE|175|3|960|0|
 
 
-### WRE(WallLEnd)
-|右墙中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WRE|175|3|960|0|
-
-
-### LLS(LaneLStart)
+### LLS(LaneLeftStart)
 |红线起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LLS|175|3|960|0|
 
 
-### LLN(LaneLNext)
+### LLN(LaneLeftNext)
 |红线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LLN|175|3|960|0|
 
 
-### LLE(LaneLEnd)
+### LLE(LaneLeftEnd)
 |红线中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LLE|175|3|960|0|
 
 
-### LCS(LaneCStart)
+### LCS(LaneCenterStart)
 |绿线起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LCS|175|3|960|0|
 
 
-### LCN(LaneCNext)
+### LCN(LaneCenterNext)
 |绿线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LCN|175|3|960|0|
 
 
-### LCE(LaneCEnd)
+### LCE(LaneCenterEnd)
 |绿线中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LCE|175|3|960|0|
 
-### LRS(LaneRStart)
+### LRS(LaneRightStart)
 |蓝线起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LRS|175|3|960|0|
 
 
-### LRN(LaneRNext)
+### LRN(LaneRightNext)
 |蓝线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LRN|175|3|960|0|
 
 
-### LRE(LaneREnd)
+### LRE(LaneRightEnd)
 |蓝线中止物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |LRE|175|3|960|0|
