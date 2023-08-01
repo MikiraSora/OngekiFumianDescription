@@ -11,7 +11,7 @@
 |
 └───option
     └───A688    //option文件,后缀数值范围 000 ~ 999
-        │   DataConfig.xml    //option包描述文件
+        │   DataConfig.xml    //option包描述文件(必须有，但可以随便找个老的opt复制过来)
         │
         ├───assets //封面文件
         |
