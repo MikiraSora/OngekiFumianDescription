@@ -216,6 +216,7 @@ BulletType:
 <a name="ongeki_md_9">*9:</a> 效果时效，超出这个时效时当前速度倍率会默认变回成1
 
 <a name="ongeki_md_32">*32:</a> 对于`BLT`和`BEL`来说，它们一般也是受到变速影响。但如果它们引用的`BPL`对象的`Target`字段值为`PLR`(Player)时。则不受变速命令影响(即当作它们soflan一直为1)
+
 <a name="ongeki_md_33">*33:</a> 如果想要谱面开倒车，那么仅需要给它设置负数
 
 
