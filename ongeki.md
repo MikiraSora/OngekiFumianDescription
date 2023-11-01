@@ -106,7 +106,7 @@ yy行为描述,xx行为具体示例命令内容
 |--|--|
 |T_TAP|595|
 
-<a name="ongeki_md_21">*21:</a> `T_HOLD` = 所有Tap数量 + 所有Hold数量 - `T_SIDE`
+<a name="ongeki_md_21">*24:</a> `T_HOLD` = 所有Tap数量 + 所有Hold数量 - `T_SIDE`
 
 ### T_HOLD
 |T_HOLD|Hold类判定数量(包括长条中间的判定)[\*21](#ongeki_md_21)|
@@ -149,7 +149,7 @@ yy行为描述,xx行为具体示例命令内容
 <a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
-|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)| 
+|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)| 
 |--|--|--|--|--|--|--|--|
 |BPL|A0|UPS|0|FIX|1|N|CIR|
 
@@ -158,7 +158,7 @@ Shooter枚举:
 |枚举值|枚举全名|解释|
 |--|--|--|
 |UPS|TargetHead|从子弹终点位置发出,即在BLT等命令的XGrid位置|
-|ENE|Enemy|从敌人位置|
+|ENE|Enemy|从敌人位置，可以配合ENS(EnemyLaneStart)轨道配合使用|
 |CEN|Center|基于谱面中心,即XGrid=(0,0)|
 
 <a name="ongeki_md_6">*6:</a>
@@ -166,7 +166,7 @@ Target:
 |枚举值|枚举全名|解释|
 |--|--|--|
 |PLR|Player|射向玩家位置|
-|FIX|FixField|(?)射向对应位置，即在BLT等命令的XGrid位置|
+|FIX|FixField|射向对应位置，即BLT等物件钦定的XGrid位置|
 
 <a name="ongeki_md_7">*7:</a>
 BulletSize:
@@ -207,17 +207,20 @@ BulletType:
 |CLK|0|0|
 
 
-### SFL(Soflan , change playback speed)
-|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|soflan(?)|
+### SFL(Soflan , change playback speed)[\*32](#ongeki_md_32)
+|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|
 |--|--|--|--|--|
 |SFL|0|0|240|1|
 
 <a name="ongeki_md_8">*8:</a> neta konmai的sof-lan<br/>
-<a name="ongeki_md_9">*9:</a> 效果时效
+<a name="ongeki_md_9">*9:</a> 效果时效，超出这个时效时当前速度倍率会默认变回成1
+
+<a name="ongeki_md_32">*32:</a> 对于`BLT`和`BEL`来说，它们一般也是受到变速影响。但如果它们引用的`BPL`对象的`Target`字段值为`PLR`(Player)时。则不受变速命令影响(即当作它们soflan一直为1)
+<a name="ongeki_md_33">*33:</a> 如果想要谱面开倒车，那么仅需要给它设置负数
 
 
 ### EST(EnemySet)
-|播放敌人声音|tUnit|tGrid|tagTbl[\*10](#ongeki_md_10)|
+|~~播放敌人声音~~|tUnit|tGrid|tagTbl[\*10](#ongeki_md_10)|
 |--|--|--|--|
 |EST|0|0|WAVE1|
 
@@ -227,7 +230,7 @@ WaveChangeConst.Tag:
 |--|--|
 |WAVE1|声音1|
 |WAVE2|声音2|
-|BOSS|Boss声音|
+|BOSS|Boss声音，在合适的地方设置这个值的EST命令可以进入小妹妹BOSS对战阶段。如果不放置，那么游戏会默认在谱面中间时间段放置|
 
 
 ### WLS(WallLStart)
@@ -391,9 +394,9 @@ WaveChangeConst.Tag:
 |--|--|--|--|--|--|--|--|--|--|
 |LBK|173|92|1440|24|0|93|0|24|0|
 
-<a name="ongeki_md_30">*30:</a> 每个LBK只能锁一个边，至于锁哪边就看GroupId引用的墙的类型。
+<a name="ongeki_md_30">*30:</a> 每个LBK只能锁一个边，至于锁哪边就看GroupId引用的墙的类型。比如你想锁左边的墙不想让人物超出这个边界，那么只需要LBK的GroupId设置成对应左墙的RecordId即可，但注意LBK有效持续时间应该在墙轨道的显示时间范围内。
 
-### BLT(Bullet)
+### BLT(Bullet)[\*32](#ongeki_md_32)
 |Bullet|strId|tUnit|tGrid|xUnit|BulletType[\*18](#ongeki_md_18)|
 |--|--|--|--|--|--|
 |BLT|A0|30|960|-24|NML|
@@ -426,19 +429,20 @@ BulletType:
 
 
 ### OBS(ObliqueBeamStart)
-|(?)定向激光起始物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnit(?)|
+|倾斜激光起始物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnitOffset[\*31](#ongeki_md_31)|
 |--|--|--|--|--|--|--|
 |OBS|0|117|960|-40|4|5|
 
+<a name="ongeki_md_31">*31:</a>以OBS的水平位置为基准，偏移XUnit个单位作为固定位置，向着当前时间内激光轨道的位置发射激光。因此只有OBS的shootPosXUnitOffset是有用的,OBN和OBE的shootPosXUnitOffset不会起作用
 
 ### OBN(ObliqueBeamNext)
-|(?)定向激光(可重复)中间物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnit(?)|
+|倾斜激光(可重复)中间物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnitOffset[\*31](#ongeki_md_31)|
 |--|--|--|--|--|--|--|
 |BMN|0|117|1500|-40|4|5|
 
 
 ### OBE(ObliqueBeamEnd)
-|(?)定向激光终中止物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnit(?)|
+|倾斜激光终中止物件|recordId|tUnit|tGrid|xUnit|widthID[\*11](#ongeki_md_11)|shootPosXUnitOffset[\*31](#ongeki_md_31)|
 |--|--|--|--|--|--|--|
 |BME|0|117|1500|-40|4|5|
 
@@ -454,7 +458,7 @@ widthID:
 |5|24|20|
 
 
-### BEL(Bell)
+### BEL(Bell)[\*32](#ongeki_md_32)
 |Bell物件|tUnit|tGrid|xUnit|bulletPallete[\*19](#ongeki_md_19)|
 |--|--|--|--|--|
 |BEL|3|1440|4|-- 或 某个BPL的strID|
