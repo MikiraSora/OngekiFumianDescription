@@ -37,6 +37,7 @@ yy行为描述,xx行为具体示例命令内容
 |--|--|--|
 |MET_DEF|4|4|
 
+<a name="ongeki_md_34">*34:</a> 如果bunshi为0,那么Hold按住时，不会播放循环音效 (比如MarbleBlue.的休息段)。
 
 ### TickResolution
 |TGrid.ResT[\*1](#ongeki_md_1)|resT|
@@ -480,7 +481,7 @@ widthID:
 <a name="ongeki_md_12">*12:</a> XTP全名ExTap，但等同于CTP(CriticalTap)
 
 
-### HLD(Hold) or CHD/XHD[\*15](#ongeki_md_15)(CriticalHold)
+### HLD(Hold) or CHD/XHD[\*15](#ongeki_md_15)(CriticalHold) [\*34](#ongeki_md_34)
 |(Critical)Hold|laneGroupId[\*13](#ongeki_md_13)[\*14](#ongeki_md_14)|Fore.tUnit|Fore.tGrid|Fore.xUnit|Fore.xGrid|Rear.tUnit|Rear.tGrid|Rear.xUnit|Rear.xGrid|
 |--|--|--|--|--|--|--|--|--|--|
 |`HLD` or (`CHD` = `XHD`)|151|1|1200|-12|0|1|1680|-12|0|
