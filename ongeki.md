@@ -1,7 +1,7 @@
 ## 简介
 此文件将描述ogkr文件(即音击谱面)里面的命令以及提供相关解释<br/>
 注意,描述内容打上`(?)`即表示此内容不确定也不清楚，不保证后面有所改变<br/>
-目前版本：bright memory 1.40
+目前版本：bright memory act.3 1.45
 
 ## 格式描述
 |yy|yy|yy|yy|
@@ -36,8 +36,6 @@ yy行为描述,xx行为具体示例命令内容
 |节拍信息|bunshi|bunbo|
 |--|--|--|
 |MET_DEF|4|4|
-
-<a name="ongeki_md_34">*34:</a> 如果bunshi为0,那么Hold按住时，不会播放循环音效 (比如MarbleBlue.的休息段)。
 
 ### TickResolution
 |TGrid.ResT[\*1](#ongeki_md_1)|resT|
@@ -150,9 +148,11 @@ yy行为描述,xx行为具体示例命令内容
 <a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
-|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)| 
-|--|--|--|--|--|--|--|--|
-|BPL|A0|UPS|0|FIX|1|N|CIR|
+|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)|randDiffPos[\*35](#ongeki_md_35)|
+|--|--|--|--|--|--|--|--|--|
+|BPL|A0|UPS|0|FIX|1|N|CIR|0|
+
+<a name="ongeki_md_35">*35:</a> 表示子弹是随机弹，比如有射向X[24,0]的子弹，其子弹模板的randDiffPos为3，那么子弹实际射向X[21,0]~X[27,0]随机一个整数位置
 
 <a name="ongeki_md_5">*5:</a>
 Shooter枚举:
@@ -489,4 +489,5 @@ widthID:
 <a name="ongeki_md_12">*15:</a> XHD全名ExHold，但等同于CHD(CriticalHold)<br/>
 <a name="ongeki_md_13">*13:</a> Tap/Hold需要引用Lane的GroupId,但引用这货仅仅是为了钦定物件的颜色和类型<br/>
 <a name="ongeki_md_14">*14:</a> 墙壁也是Lane一种，因此墙壁Tap/Hold也是按照此命令引用墙壁的GroupId即可<br/>
+<a name="ongeki_md_34">*34:</a> Hold音效音量大小受当前Hold条位置影响且自带混响效果，当前Hold条位置离初始Hold位置越远，Hold持续音效音量越小。如果存在多个Hold，则按距离最远的计算
 
