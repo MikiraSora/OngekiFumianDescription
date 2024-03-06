@@ -148,9 +148,11 @@ yy行为描述,xx行为具体示例命令内容
 <a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
-|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)|randDiffPos[\*35](#ongeki_md_35)|
+|子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit) [\*36](#ongeki_md_36)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)|randDiffPos[\*35](#ongeki_md_35)|
 |--|--|--|--|--|--|--|--|--|
 |BPL|A0|UPS|0|FIX|1|N|CIR|0|
+
+<a name="ongeki_md_36">*36:</a> target枚举计算出位置的偏移量，既先通过target获取到目标位置，再加上placeOffset(和randDiffPos)才是实际子弹射向的位置.
 
 <a name="ongeki_md_35">*35:</a> 表示子弹是随机弹，比如有射向X[24,0]的子弹，其子弹模板的randDiffPos为3，那么子弹实际射向X[21,0]~X[27,0]随机一个整数位置
 
@@ -160,14 +162,14 @@ Shooter枚举:
 |--|--|--|
 |UPS|TargetHead|从子弹终点位置发出,即在BLT等命令的XGrid位置|
 |ENE|Enemy|从敌人位置，可以配合ENS(EnemyLaneStart)轨道配合使用|
-|CEN|Center|基于谱面中心,即XGrid=(0,0)|
+|CEN|Center|基于谱面中心,即X[0,0]|
 
 <a name="ongeki_md_6">*6:</a>
 Target:
 |枚举值|枚举全名|解释|
 |--|--|--|
-|PLR|Player|射向玩家位置|
-|FIX|FixField|射向对应位置，即BLT等物件钦定的XGrid位置|
+|PLR|Player|射向玩家位置。target的位置就是子弹出现时,玩家的当前水平位置|
+|FIX|FixField|射向对应位置。target的位置就是放置子弹的水平位置|
 
 <a name="ongeki_md_7">*7:</a>
 BulletSize:
