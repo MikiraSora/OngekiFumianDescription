@@ -152,7 +152,7 @@ yy行为描述,xx行为具体示例命令内容
 |--|--|--|--|--|--|--|--|--|
 |BPL|A0|UPS|0|FIX|1|N|CIR|0|
 
-<a name="ongeki_md_36">*36:</a> target枚举计算出位置的偏移量，既先通过target获取到目标位置，再加上placeOffset(和randDiffPos)才是实际子弹射向的位置.
+<a name="ongeki_md_36">*36:</a> 先通过Target枚举计算目标位置，再加上placeOffset(和randDiffPos)才是实际子弹射向的位置.
 
 <a name="ongeki_md_35">*35:</a> 表示子弹是随机弹，比如有射向X[24,0]的子弹，其子弹模板的randDiffPos为3，那么子弹实际射向X[21,0]~X[27,0]随机一个整数位置
 
