@@ -141,11 +141,11 @@ yy行为描述,xx行为具体示例命令内容
 
 
 ### PROGJUDGE_BPM
-|(?)Hold相关|progJudgeBPM[\*4](#ongeki_md_4)|
+|与Hold长条物量相关|progJudgeBPM[\*4](#ongeki_md_4)|
 |--|--|
 |PROGJUDGE_BPM|240|
 
-<a name="ongeki_md_4">*4:</a> 若<=1.00001f,则自动钦定为240
+<a name="ongeki_md_4">*4:</a> 此值与Hold长条物件数量成正比,值越高则Hold长条物量越多。 若<=1.00001f,则自动钦定为240
 
 ### BPL(Bullet Pallete List)
 |子弹模板|strID|Shooter[\*5](#ongeki_md_5)|placeOffset (xUnit) [\*36](#ongeki_md_36)|target[\*6](#ongeki_md_6)[\*32](#ongeki_md_32)|speed|BulletSize[\*7](#ongeki_md_7)|BulletType[\*17](#ongeki_md_17)|randDiffPos[\*35](#ongeki_md_35)|
