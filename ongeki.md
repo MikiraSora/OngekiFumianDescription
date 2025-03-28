@@ -209,11 +209,16 @@ BulletType:
 |--|--|--|
 |CLK|0|0|
 
+### ISF [\*32](#ongeki_md_37)
+|IndividualSoflanArea|tUnit|tGrid|xUnit|tGridLength 时长/长度|areaWidth 宽度|pattern 指定变速组id|
+|--|--|--|--|--|--|--|
+|SFL|1|0|12|1920|4|2|
+<a name="ongeki_md_37">*37:</a> 可以将范围内的物件(Bell/Bullet/Tap/Hold/Flick)都强制设定它们的pattern值为本命令钦定的值
 
 ### SFL(Soflan , change playback speed)[\*32](#ongeki_md_32)
-|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|
-|--|--|--|--|--|
-|SFL|0|0|240|1|
+|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|所属变速组[\*38](#ongeki_md_38)|
+|--|--|--|--|--|--|
+|SFL|0|0|240|1|3|
 
 <a name="ongeki_md_8">*8:</a> neta konmai的sof-lan<br/>
 <a name="ongeki_md_9">*9:</a> 效果时效，超出这个时效时当前速度倍率会默认变回成1
@@ -221,6 +226,8 @@ BulletType:
 <a name="ongeki_md_32">*32:</a> 对于`BLT`和`BEL`来说，它们一般也是受到变速影响。但如果它们引用的`BPL`对象的`Target`字段值为`PLR`(Player)时。则不受变速命令影响(即当作它们soflan一直为1)
 
 <a name="ongeki_md_33">*33:</a> 如果想要谱面开倒车，那么仅需要给它设置负数
+
+<a name="ongeki_md_38">*38:</a> 所有的sfl命令按照pattern值分组,其他物件可以通过自己的pattern使用不同的变速组，类似于Arcaea的[变速组](https://www.bilibili.com/opus/447826726607748629)
 
 
 ### EST(EnemySet)
