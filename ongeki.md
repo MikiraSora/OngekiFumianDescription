@@ -209,10 +209,11 @@ BulletType:
 |--|--|--|
 |CLK|0|0|
 
-### ISF [\*32](#ongeki_md_37)
-|IndividualSoflanArea|tUnit|tGrid|xUnit|tGridLength 时长/长度|areaWidth 宽度|pattern 指定变速组id|
+### ISF(IndividualSoflanArea) [\*32](#ongeki_md_37)
+|指定物件使用变速组|tUnit|tGrid|xUnit|tGridLength 时长/长度|areaWidth 宽度|pattern 指定变速组id|
 |--|--|--|--|--|--|--|
 |ISF, 钦定某个区域内物件的变速组|1|0|12|1920|4|2|
+
 <a name="ongeki_md_37">*37:</a> 可以将范围内的物件(Bell/Bullet/Tap/Hold/Flick)都强制设定它们的pattern值为本命令钦定的值
 
 ### SFL(Soflan , change playback speed)[\*32](#ongeki_md_32)
