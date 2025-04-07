@@ -217,7 +217,7 @@ BulletType:
 <a name="ongeki_md_37">*37:</a> 可以将范围内的物件(Bell/Bullet/Tap/Hold/Flick)都强制设定它们的pattern值（变速组Id）为本命令钦定的值。但也因为如此，同一个位置的物件无法钦定不同的变速组。轨道也支持变速分组，但取决于附着物件是哪个变速组
 
 ### SFL(Soflan , change playback speed)[\*32](#ongeki_md_32)
-|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|所属变速组[\*38](#ongeki_md_38)|
+|Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|所属变速组id[\*38](#ongeki_md_38)|
 |--|--|--|--|--|--|
 |SFL|0|0|240|1|3|
 
