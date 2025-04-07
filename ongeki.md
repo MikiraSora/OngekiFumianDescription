@@ -214,7 +214,7 @@ BulletType:
 |--|--|--|--|--|--|--|
 |ISF, 钦定某个区域内物件的变速组|1|0|12|1920|4|2|
 
-<a name="ongeki_md_37">*37:</a> 可以将范围内的物件(Bell/Bullet/Tap/Hold/Flick)都强制设定它们的pattern值为本命令钦定的值
+<a name="ongeki_md_37">*37:</a> 可以将范围内的物件(Bell/Bullet/Tap/Hold/Flick)都强制设定它们的pattern值为本命令钦定的值(但也因为如此，同一个位置的物件无法钦定不同的变速分组)
 
 ### SFL(Soflan , change playback speed)[\*32](#ongeki_md_32)
 |Soflan[\*8](#ongeki_md_8)|tUnit|tGrid|tGridLength[\*9](#ongeki_md_9)|当前速度倍率[\*33](#ongeki_md_33)|所属变速组[\*38](#ongeki_md_38)|
