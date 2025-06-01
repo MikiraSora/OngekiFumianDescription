@@ -246,109 +246,110 @@ WaveChangeConst.Tag:
 
 
 ### WLS(WallLStart)
-|左墙起始物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WLS|173|1|960|-24|
+|左墙起始物件|GroupId|tUnit|tGrid|xUnit|--|--|isTransparent[\*10](#ongeki_md_39)|
+|--|--|--|--|--|--|--|--|
+|WLS|173|1|960|-24|--|--|0|
 
+<a name="ongeki_md_10">*39: isTransparent>0时不会显示轨道</a> 
 
 ### WLN(WallLNext)
-|左墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WLN|173|2|960|0|
+|左墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|WLN|173|2|960|0|--|--|--|
 
 
 ### WLE(WallLEnd)
-|左墙中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WLE|173|3|960|0|
+|左墙中止物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|WLE|173|3|960|0|--|--|--|
 
 
 ### WRS(WallRStart)
-|右墙起始物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WRS|175|1|960|-24|
+|右墙起始物件|GroupId|tUnit|tGrid|xUnit|--|--|isTransparent|
+|--|--|--|--|--|--|--|--|
+|WRS|175|1|960|-24|--|--|0|
 
 
 ### WRN(WallRNext)
-|右墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WRN|175|2|960|0|
+|右墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|WRN|175|2|960|0|--|--|--|
 
 
 ### WRE(WallREnd)
-|右墙中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|WRE|175|3|960|0|
+|右墙中止物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|WRE|175|3|960|0|--|--|--|
 
 
 ### LLS(LaneLeftStart)
-|红线起始物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LLS|175|3|960|0|
+|红线起始物件|GroupId|tUnit|tGrid|xUnit|--|--|isTransparent|
+|--|--|--|--|--|--|--|--|
+|LLS|175|3|960|0|--|--|0|
 
 
 ### LLN(LaneLeftNext)
-|红线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LLN|175|3|960|0|
+|红线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LLN|175|3|960|0|--|--|--|
 
 
 ### LLE(LaneLeftEnd)
-|红线中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LLE|175|3|960|0|
+|红线中止物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LLE|175|3|960|0|--|--|--|
 
 
 ### LCS(LaneCenterStart)
-|绿线起始物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LCS|175|3|960|0|
+|绿线起始物件|GroupId|tUnit|tGrid|xUnit|--|--|isTransparent|
+|--|--|--|--|--|--|--|--|
+|LCS|175|3|960|0|--|--|0|
 
 
 ### LCN(LaneCenterNext)
-|绿线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LCN|175|3|960|0|
+|绿线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LCN|175|3|960|0|--|--|--|
 
 
 ### LCE(LaneCenterEnd)
-|绿线中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LCE|175|3|960|0|
+|绿线中止物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LCE|175|3|960|0|--|--|--|
 
 ### LRS(LaneRightStart)
-|蓝线起始物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LRS|175|3|960|0|
+|蓝线起始物件|GroupId|tUnit|tGrid|xUnit|--|--|isTransparent|
+|--|--|--|--|--|--|--|--|
+|LRS|175|3|960|0|--|--|0|
 
 
 ### LRN(LaneRightNext)
-|蓝线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LRN|175|3|960|0|
+|蓝线(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LRN|175|3|960|0|--|--|--|
 
 
 ### LRE(LaneRightEnd)
-|蓝线中止物件|GroupId|tUnit|tGrid|xUnit|
-|--|--|--|--|--|
-|LRE|175|3|960|0|
+|蓝线中止物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
+|--|--|--|--|--|--|--|--|
+|LRE|175|3|960|0|--|--|--|
 
 
 ### CLS(ColorfulLaneStart)
-|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
-|--|--|--|--|--|--|--|
-|CLS|175|3|960|0|11|2|
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|isTransparent|
+|--|--|--|--|--|--|--|--|
+|CLS|175|3|960|0|11|2|0|
 
 
 ### CLN(ColorfulLaneNext)
-|其他颜色(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
-|--|--|--|--|--|--|--|
-|CLN|175|3|960|0|11|2|
+|其他颜色(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|--|
+|--|--|--|--|--|--|--|--|
+|CLN|175|3|960|0|11|2|--|
 
 ### CLN(ColorfulLaneEnd)
-|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|
-|--|--|--|--|--|--|--|
-|CLE|175|3|960|0|11|2|
+|其他颜色中止物件|GroupId|tUnit|tGrid|xUnit|colorfulLaneColorID[\*15](#ongeki_md_15)|colorfulLaneBrightnessID[\*16](#ongeki_md_16)|--|
+|--|--|--|--|--|--|--|--|
+|CLE|175|3|960|0|11|2|--|
 
 <a name="ongeki_md_15">*15:</a> 虽然命令是"Colorful"但实际已经钦定好一系列自定义颜色了:
 |值|颜色名字|颜色预览|
@@ -378,9 +379,10 @@ WaveChangeConst.Tag:
 
 
 ### ENS(EnemyLaneStart)
-|对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
+|控制对面人物和杂鱼的移动轨迹起始物件|GroupId|tUnit|tGrid|xUnit|
 |--|--|--|--|--|
 |ENS|175|3|960|0|
+
 玩玩ぱくぱく☆がーる紫谱，看看对面江江抽风
 
 ### ENN(EnemyLaneNext)
