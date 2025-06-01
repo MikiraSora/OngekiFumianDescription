@@ -250,7 +250,7 @@ WaveChangeConst.Tag:
 |--|--|--|--|--|--|--|--|
 |WLS|173|1|960|-24|--|--|0|
 
-<a name="ongeki_md_10">*39: isTransparent>0时不会显示轨道</a> 
+<a name="ongeki_md_10">*39:</a> isTransparent>0时不会显示轨道
 
 ### WLN(WallLNext)
 |左墙(可重复)中间物件|GroupId|tUnit|tGrid|xUnit|--|--|--|
